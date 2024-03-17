@@ -1,8 +1,9 @@
-# Infinite Realms
+# Color Muse
 ----------------
 **Color Muse** is a web application designed to inspire User projects by generating color palettes from uploaded images.
 
 [Mockup image to go here]
+<br>
 [Link to deployed site to go here]
 
 ## Contents
