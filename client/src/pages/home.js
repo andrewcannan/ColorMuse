@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div className='container-fluid'>
+        <div className='container-fluid content'>
             <div className='row'>
                 <div className='col-12 col-md-6'>
                     <h1>Unleash Your Design Inspiration with Color Muse</h1>
