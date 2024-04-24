@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
+import Home from './pages/home';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <Home />
       <Footer />
     </div>
   );
