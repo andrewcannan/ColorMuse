@@ -1,27 +1,15 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
+import NavBar from './components/navbar/navbar';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@popperjs/core';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function App() {
-  
-  const [data, setData] = useState()
-
-  useEffect(() => {
-    fetch("/hello").then(
-      response => response.text()
-    ).then(
-      data => {
-        setData(data)
-      }
-    )
-  })
-
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          {data}
-        </p>
-      </header>
+      <NavBar />
     </div>
   );
 }
