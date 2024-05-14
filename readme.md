@@ -13,6 +13,8 @@
     * [Web App Goals](#web-app-goals)
 * [Design](#design)
     * [User Stories](#phase-1-mvp---core-functionality)
+* [Features](#features)
+    *[File Upload](#file-upload)
 
 ## User Experience
 
@@ -54,4 +56,14 @@
 | 9 | User | View and manage my saved palettes within the app in a clear and concise manner. | Easily find and reuse color combinations that resonated with me. |
 | 10 | User | Delete saved palettes that are no longer needed. | Declutter my saved collection and maintain a focused workspace. |
 
+## Features
 
+### File Upload
+
+The FileUpload component provides users with a simple and intuitive interface for uploading images. It allows users to click on a designated area to select an image file from their device. Once an image is selected, it is displayed within the component.
+
+* Upload Area: Users can click on the upload area to open a file selection dialog and choose an image file for upload.
+
+* Image Display: Upon selecting an image, it is displayed within the component, allowing users to preview their selection.
+
+* Prevent Re-uploading: Once an image is uploaded, clicking on the displayed image will not trigger the file selection dialog again, preventing accidental re-uploading.
