@@ -1,0 +1,32 @@
+input[type="file"] {
+    display: none;
+  }
+
+.temporary-container {
+    height: 60vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.custom-file-upload {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.fa-plus {
+    font-size: 3rem;
+}
+
+.uploaded-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: auto;
+}
