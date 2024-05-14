@@ -6,7 +6,7 @@ import heroImage from '../../assets/images/hero-image.png';
 const Home = () => {
     return (
         <div className='container-fluid content'>
-            <div className='row' id='top-row'>
+            <div className='row' id='top-row-home'>
                 <div className='col-12 col-md-6 order-md-last hero-image'>
                     <img src={heroImage} alt="Image of a range of colors" />
                 </div>
@@ -18,7 +18,7 @@ const Home = () => {
 
             </div>
 
-            <div className='row' id='bottom-row'>
+            <div className='row' id='bottom-row-home'>
                 <div col-8 offset-2>
                     <div className='card-group'>
                         <div className="card m-3 bg-primary text-white">

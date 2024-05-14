@@ -1,8 +1,8 @@
-#top-row {
+#top-row-home {
     margin-top: 20px;
 }
 
-#bottom-row {
+#bottom-row-home {
     margin-top: 20px;
 }
 
@@ -36,14 +36,14 @@
 }
 
 @media (min-width: 730px) {
-    #top-row {
+    #top-row-home {
         margin-top: 0;
         height: 60vh;
         justify-content: center;
         align-items: center;
     }
     
-    #bottom-row {
+    #bottom-row-home {
         margin-top: 0;
         height: 40vh;
         justify-content: center;
