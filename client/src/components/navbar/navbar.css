@@ -5,3 +5,7 @@
 .custom-navbar-toggler.navbar-toggler:focus {
     box-shadow: none;
 }
+
+.my-brand {
+    font-family: "Poetsen One";
+}
