@@ -14,7 +14,8 @@
 * [Design](#design)
     * [User Stories](#phase-1-mvp---core-functionality)
 * [Features](#features)
-    *[File Upload](#file-upload)
+    * [Home](#home)
+    * [File Upload](#file-upload)
 
 ## User Experience
 
@@ -57,6 +58,14 @@
 | 10 | User | Delete saved palettes that are no longer needed. | Declutter my saved collection and maintain a focused workspace. |
 
 ## Features
+
+### Home
+
+The Home component serves as the landing page for the Color Muse application, providing users with an introduction to its features and functionality.
+
+* Hero Section: The hero section showcases a captivating image and a brief description of the application's purpose. Users are encouraged to take action with a prominent call-to-action button to get started.
+
+* Feature Highlights: Below the hero section, feature highlights are presented in a card layout. Each card highlights a key feature of the application, such as effortless inspiration, unlocking new creativity, seamless workflow, and responsive design.
 
 ### File Upload
 
