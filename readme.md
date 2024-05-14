@@ -13,6 +13,7 @@
     * [Web App Goals](#web-app-goals)
 * [Design](#design)
     * [User Stories](#phase-1-mvp---core-functionality)
+    * [Typography](#typography)
 * [Features](#features)
     * [Home](#home)
     * [File Upload](#file-upload)
@@ -56,6 +57,12 @@
 | 8 | User | Save a generated palette to my account. | Organize and revisit my color inspiration  for future projects. |
 | 9 | User | View and manage my saved palettes within the app in a clear and concise manner. | Easily find and reuse color combinations that resonated with me. |
 | 10 | User | Delete saved palettes that are no longer needed. | Declutter my saved collection and maintain a focused workspace. |
+
+### Typography
+
+The choice of using Roboto for the main font and Poetsen One for the brand font is a strategic decision that combines readability, versatility, and brand personality.
+* Roboto is known for its clarity and readability across various digital platforms. Its clean and modern appearance ensures that text is easy to read, making it suitable for body text, headings, and other content.
+* Poetsen One is a display font with a bold and distinctive appearance. Its strong, condensed letterforms make it stand out and grab attention, making it ideal for branding elements such as logos, headers, or taglines.
 
 ## Features
 
