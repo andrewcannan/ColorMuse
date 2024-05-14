@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './fileUpload.css';
 
-const FileUpload = () => {
+const FileUpload = ({ onFileUpload }) => {
     const [image, setImage] = useState(null);
     const [disableInput, setDisableInput] = useState(false);
 
@@ -15,6 +15,7 @@ const FileUpload = () => {
         reader.onload = () => {
             setImage(reader.result);
             setDisableInput(true);
+            onFileUpload(file);
         };
         reader.readAsDataURL(file);
     };
