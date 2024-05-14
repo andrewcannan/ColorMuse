@@ -13,7 +13,7 @@ const Home = () => {
                 <div className='col-12 col-md-6 mt-3 mt-md-0'>
                     <h1>Unleash Your Design Inspiration with Color Muse</h1>
                     <h2 className='fs-3 fw-normal'>Effortlessly Generate Color Palettes from Any Image</h2>
-                    <a className='btn btn-primary mt-3 btn-lg'>Get Started</a>
+                    <a className='btn btn-primary mt-3 btn-lg' href='/generate'>Get Started</a>
                 </div>
 
             </div>
