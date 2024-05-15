@@ -13,10 +13,10 @@ const Generate = () => {
     return (
         <div className='container-fluid content'>
             <div className='row m-3' id="top-row-generate">
-                <div className='col-12 col-md-6'>
+                <div className='col-12 col-md-6 d-flex'>
                     <FileUpload onFileUpload={handleFileUpload} />
                 </div>
-                <div className='col-12 col-md-6'>
+                <div className='col-12 col-md-6 d-flex'>
                     <ProcessImage />
                 </div>
             </div>

@@ -21,7 +21,7 @@ const FileUpload = ({ onFileUpload }) => {
     };
 
     return (
-        <div className='temporary-container'>
+        <div className='container-fluid file-container'>
             <label className="custom-file-upload">
                 <input
                     type="file"

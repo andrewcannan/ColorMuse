@@ -2,13 +2,9 @@ input[type="file"] {
     display: none;
   }
 
-.temporary-container {
-    height: 60vh;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
+.file-container {
+    height: 100%;
+  }
 
 .custom-file-upload {
     height: 100%;

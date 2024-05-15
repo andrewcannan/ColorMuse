@@ -1,0 +1,31 @@
+#button-row {
+    height: 30%;
+    align-items: center;
+}
+
+#color-row {
+    height: 60%;
+}
+
+#color {
+    height: 20%;
+}
+
+#color-text {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.process-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.gray {
+    background-color: lightgray;
+}
+
+.border-gray {
+    border: 1px solid lightgray;
+}
