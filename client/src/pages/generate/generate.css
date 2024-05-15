@@ -5,3 +5,7 @@
     min-height: 60vh;
     display: flex;
 }
+
+.border {
+    border-left: 1px solid lightgray;
+}

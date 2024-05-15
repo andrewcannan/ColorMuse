@@ -14,7 +14,6 @@ const ProcessImage = () => {
                     <button type="button" className="btn btn-outline-primary btn-lg btn-block">Save</button>
                 </div>
             </div>
-            <hr></hr>
             <div className="row m-3" id="color-row">
                 <div className="col">
                     {colors.map((color) => (
