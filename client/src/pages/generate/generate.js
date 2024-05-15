@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FileUpload from "../../components/fileUpload/fileUpload";
+import ProcessImage from "../../components/processImage/processImage";
 import './generate.css';
 
 const Generate = () => {
@@ -16,7 +17,7 @@ const Generate = () => {
                     <FileUpload onFileUpload={handleFileUpload} />
                 </div>
                 <div className='col-12 col-md-6'>
-                    
+                    <ProcessImage />
                 </div>
             </div>
         </div>
