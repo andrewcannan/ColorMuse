@@ -7,11 +7,11 @@
     height: 60%;
 }
 
-#color {
+.color-display {
     height: 20%;
 }
 
-#color-text {
+.color-text {
     justify-content: center;
     align-items: center;
     display: flex;
@@ -20,10 +20,6 @@
 .process-container {
     display: flex;
     flex-direction: column;
-}
-
-.gray {
-    background-color: lightgray;
 }
 
 .border-gray {
