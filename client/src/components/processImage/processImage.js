@@ -18,10 +18,18 @@ const ProcessImage = ({ uploadedFile }) => {
                 method: 'POST',
                 body: formData,
             });
+
+            if (!response.ok) {
+                throw new Error('Failed to upload File.')
+            }
+
+            const data = await response.json();
+            setColors(data.colors)
         }
 
-        catch {
-
+        catch (error) {
+            console.error('Error uploading file:', error)
+            alert('Failed to upload File.')
         }
     }
 
