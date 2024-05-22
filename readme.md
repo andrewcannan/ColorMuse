@@ -15,8 +15,8 @@
     * [User Stories](#phase-1-mvp---core-functionality)
     * [Typography](#typography)
 * [Features](#features)
-    * [Home](#home)
-    * [File Upload](#file-upload)
+    * [Home](#home-page)
+    * [Generate Page](#generate-page)
 
 ## User Experience
 
@@ -66,7 +66,7 @@ The choice of using Roboto for the main font and Poetsen One for the brand font 
 
 ## Features
 
-### Home
+### Home Page
 
 The Home component serves as the landing page for the Color Muse application, providing users with an introduction to its features and functionality.
 
@@ -74,7 +74,9 @@ The Home component serves as the landing page for the Color Muse application, pr
 
 * Feature Highlights: Below the hero section, feature highlights are presented in a card layout. Each card highlights a key feature of the application, such as effortless inspiration, unlocking new creativity, seamless workflow, and responsive design.
 
-### File Upload
+### Generate Page
+
+#### File Upload
 
 The FileUpload component provides users with a simple and intuitive interface for uploading images. It allows users to click on a designated area to select an image file from their device. Once an image is selected, it is displayed within the component.
 
@@ -83,3 +85,18 @@ The FileUpload component provides users with a simple and intuitive interface fo
 * Image Display: Upon selecting an image, it is displayed within the component, allowing users to preview their selection.
 
 * Prevent Re-uploading: Once an image is uploaded, clicking on the displayed image will not trigger the file selection dialog again, preventing accidental re-uploading.
+
+#### Process Image
+
+When a user uploads an image, the ProcessImage component allows them to generate a color palette based on that image. Upon clicking the "Generate" button, the component sends the uploaded image to a Flask backend endpoint (/process_image) for processing. The backend uses the Pylette library to extract colors from the image and selects five random colors from the palette. Random colors are are selected from the palette until no duplicate colors are present to ensure diversity.
+
+The RGB values of the selected colors are converted to hexadecimal format (#RRGGBB) and sent back to the client. The component then updates its state with the generated color palette, which is subsequently displayed to the user.
+
+* Generate Button: Initiates the color extraction process upon clicking.
+
+* Save Button: Provides the option for the user to save this palette if logged in.
+
+* Color Display: Presents the generated color palette in a visually appealing format, with colored squares representing each color and their corresponding hex values.
+
+* Error Handling: Alerts users if they attempt to generate a palette without uploading an image or if an error occurs during the file upload/processing.
+
