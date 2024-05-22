@@ -17,7 +17,7 @@ const Generate = () => {
                     <FileUpload onFileUpload={handleFileUpload} />
                 </div>
                 <div className='col-12 col-md-6 d-flex'>
-                    <ProcessImage />
+                    <ProcessImage uploadedFile={uploadedFile} />
                 </div>
             </div>
         </div>
