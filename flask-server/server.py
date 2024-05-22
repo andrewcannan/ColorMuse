@@ -10,13 +10,22 @@ def process_image():
     Extracts colors using Pylette library, calls rgb method on each returned value, converts to hex value and returns that to the client
     """
     image = request.files['image']
-    palette = extract_colors(image=image, palette_size=5, mode='MC', sort_mode='luminance')
-    
-    rgb_colors = [color.rgb for color in palette]
-    hex_colors = [rgb_to_hex(*rgb) for rgb in rgb_colors]
+    palette = extract_colors(image=image, palette_size=10, mode='MC', sort_mode='luminance')
 
-    return {"colors": hex_colors}
+    while True:
+        random_colors = palette.random_color(N=5, mode='uniform')
+
+        if not has_duplicates(random_colors):
+            rgb_colors = [color.rgb for color in random_colors]
+            hex_colors = [rgb_to_hex(*rgb) for rgb in rgb_colors]
+            return {"colors": hex_colors}
     
+
+def has_duplicates(obj):
+    """
+    Convert tuples to sets and check for length difference as sets can't have duplicates
+    """
+    return len(obj) != len(set(obj))
 
 def rgb_to_hex(r, g, b):
     """
