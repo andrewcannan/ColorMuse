@@ -37,8 +37,8 @@ const ProcessImage = ({ uploadedFile }) => {
             </div>
             <div className="row m-3" id="color-row">
                 <div className="col">
-                    {colors.map((color) => (
-                        <div className="row border-gray px-0 color-display">
+                    {colors.map((color, index) => (
+                        <div className="row border-gray px-0 color-display" key={index}>
                             <div className="col-3" style={{ backgroundColor: color || "lightgray" }}></div>
                             <div className="col-9 color-text">Colour</div>
                         </div>
