@@ -33,7 +33,7 @@ const FileUpload = ({ onFileUpload }) => {
                     <img src={image} alt="Uploaded" className="uploaded-image" />
                 ) : (
                     <>
-                        <span><i class="fa-solid fa-plus"></i></span>
+                        <span><i className="fa-solid fa-plus"></i></span>
                         <br />
                         <span>Click to upload image.</span>
                     </>
