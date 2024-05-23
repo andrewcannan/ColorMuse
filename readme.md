@@ -90,13 +90,19 @@ The FileUpload component provides users with a simple and intuitive interface fo
 
 When a user uploads an image, the ProcessImage component allows them to generate a color palette based on that image. Upon clicking the "Generate" button, the component sends the uploaded image to a Flask backend endpoint (/process_image) for processing. The backend uses the Pylette library to extract colors from the image and selects five random colors from the palette. Random colors are are selected from the palette until no duplicate colors are present to ensure diversity.
 
-The RGB values of the selected colors are converted to hexadecimal format (#RRGGBB) and sent back to the client. The component then updates its state with the generated color palette, which is subsequently displayed to the user.
+The RGB values of the selected colors are converted to hexadecimal format (#RRGGBB) and sent back to the client. The component then updates its state with the generated color palette, the name of these hex color values are then retrieved from the Color Name API and state updated again.
 
 * Generate Button: Initiates the color extraction process upon clicking.
 
 * Save Button: Provides the option for the user to save this palette if logged in.
 
-* Color Display: Presents the generated color palette in a visually appealing format, with colored squares representing each color and their corresponding hex values.
+* State Management: The component maintains state using the useState hook. It stores the generated color palette and a flag indicating whether color names need to be fetched.
+
+* Color Name Fetching: If necessary, the component fetches color names using an external API (https://api.color.pizza/v1/). It sends the hex values of the colors and receives their corresponding names. This step enhances the visual representation of the palette.
+
+* Color Display: Presents the generated color palette in a visually appealing format, with colored squares representing each color and their corresponding names.
+
+* Hex Value Reveal: Upon hovering over the generated color, the color expands revealing the hexidecimal value.
 
 * Error Handling: Alerts users if they attempt to generate a palette without uploading an image or if an error occurs during the file upload/processing.
 
