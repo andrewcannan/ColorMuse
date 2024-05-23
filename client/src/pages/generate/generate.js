@@ -12,7 +12,7 @@ const Generate = () => {
 
     return (
         <div className='container-fluid content'>
-            <div className='row m-3' id="top-row-generate">
+            <div className='row m-3 mt-5' id="top-row-generate">
                 <div className='col-12 col-md-6 d-flex border'>
                     <FileUpload onFileUpload={handleFileUpload} />
                 </div>
