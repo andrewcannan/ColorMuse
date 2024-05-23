@@ -7,7 +7,8 @@ app = Flask(__name__)
 @app.route("/process_image", methods=['POST'])
 def process_image():
     """
-    Extracts colors using Pylette library, calls rgb method on each returned value, converts to hex value and returns that to the client
+    Extracts colors using Pylette library, picks 5 random colors from palette until there are no duplicate colors,
+    performs conversion from rgba to rbg and then to its hex value, returns hex values to client.
     """
     image = request.files['image']
     palette = extract_colors(image=image, palette_size=10, mode='MC', sort_mode='luminance')
