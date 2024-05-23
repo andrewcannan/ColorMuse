@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./processImage.css";
 
 const ProcessImage = ({ uploadedFile }) => {
-    const [colors, setColors] = useState(Array(5).fill(null))
+    const [colors, setColors] = useState(Array(5).fill(null));
+    const [needFetchNames, setNeedFetchNames] = useState(false);
 
     const handleSubmit = async () => {
         if (!uploadedFile) {
@@ -24,7 +25,11 @@ const ProcessImage = ({ uploadedFile }) => {
             }
 
             const data = await response.json();
-            setColors(data.colors)
+
+            const colors = data.colors
+            setColors(colors)
+            setNeedFetchNames(true)
+
         }
 
         catch (error) {
@@ -32,6 +37,39 @@ const ProcessImage = ({ uploadedFile }) => {
             alert('Failed to upload File.')
         }
     }
+
+    const fetchColorNames = async () => {
+        try {
+            const hexValues = colors.map(color => color.replace('#', ''));
+
+            const apiUrl = `https://api.color.pizza/v1/?values=${hexValues.join(',')}&list=wikipedia&noduplicates=true`;
+
+            const response = await fetch(apiUrl);
+            if (!response.ok) {
+                throw new Error('Failed to fetch color names.');
+            }
+
+            const data = await response.json();
+
+            const updatedColors = data.colors.map((color, index) => ({
+                hex: colors[index],
+                name: color.name
+            }));
+            setColors(updatedColors);
+            setNeedFetchNames(false)
+        }
+
+        catch (error) {
+            console.error('Error fetching color names:', error);
+            alert('Error fetching color names')
+        }
+    };
+
+    useEffect(() => {
+        if (needFetchNames) {
+            fetchColorNames();
+        }
+    }, [needFetchNames]);
 
     return (
         <div className="container-fluid process-container">
@@ -47,8 +85,8 @@ const ProcessImage = ({ uploadedFile }) => {
                 <div className="col">
                     {colors.map((color, index) => (
                         <div className="row border-gray px-0 color-display" key={index}>
-                            <div className="col-3" style={{ backgroundColor: color || "lightgray" }}></div>
-                            <div className="col-9 color-text">Colour</div>
+                            <div className="col-3" style={{ backgroundColor: color?.hex || "lightgray" }}></div>
+                            <div className="col-9 color-text">{color?.name || 'No Color'}</div>
                         </div>
                     ))}
                 </div>
