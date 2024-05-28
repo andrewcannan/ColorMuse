@@ -25,3 +25,40 @@
 .border-gray {
     border: 1px solid lightgray;
 }
+
+#color-row .color-display {
+    display: flex;
+    transition: all;
+    overflow: hidden;
+}
+
+#color-row .color-box {
+    transition: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#color-row .color-box p {
+    display: none;
+}
+
+#color-row .color-text {
+    flex: 1;
+    transition: all;
+}
+
+#color-row .color-display:hover .color-box {
+    flex: 0 0 100%;
+}
+
+#color-row .color-display:hover .color-box p {
+    display: block;
+    color: white;
+    mix-blend-mode: difference;
+    font-size: 1.5rem;
+}
+
+#color-row .color-display:hover .color-text {
+    display: none;
+}
